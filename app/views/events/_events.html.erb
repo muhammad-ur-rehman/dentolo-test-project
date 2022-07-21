@@ -1,0 +1,9 @@
+ <div class="event">
+  <h1 class="title"><%= events.title %></h1>
+  <h3><%= events.time %></h3>
+  <ul class="venues">
+    <% JSON.parse(events.sub_events).values.each do |v| %>
+      <li><%= v["venue"] %></li>
+    <% end %>
+  </ul>
+</div>

@@ -1,0 +1,28 @@
+// Place all the styles related to the events controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.filters {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px;
+    padding: 30px;
+}
+
+
+.search-form {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.refresh-btn {
+    text-decoration: none;
+    padding: 15px;
+    background-color: lightseagreen;
+    border-radius: 5px;
+    color: white;
+}

@@ -1,0 +1,31 @@
+
+<%= search_form_for @q, class: 'search-form' do |f| %>
+  <div class="field">
+    <%= f.label :title_cont %>
+    <%= f.search_field :title_cont %>
+  </div>
+
+  <div class="field">
+    <%= f.label :web_source_eq %>
+    <%= f.select :web_source_eq, options_for_select({'--select a web source--': ''}.merge(Event.web_sources)) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :event_time %>
+    <%= f.date_field :time_gteq %>
+    <%= f.date_field :time_lteq %>
+  </div>
+
+  <%= f.submit %>
+<% end %>
+
+<div class="filters">
+    <%= link_to "Refresh Events", refresh_events_path, class: 'refresh-btn' %>
+</div>
+<div class="events">
+  <% if @events.present? %>
+    <%= render partial: 'events', collection: @events %>
+  <% else %>
+    <p>No events to show.</p>
+  <% end %>
+</div>
