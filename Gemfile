@@ -21,6 +21,14 @@ gem 'jbuilder', '~> 2.7'
 gem 'httparty'
 
 gem 'ransack'
+
+gem 'rspec-rails', '~> 5.0.0'
+gem 'simplecov', require: false
+gem 'factory_bot_rails'
+gem 'faker'
+gem 'database_cleaner-active_record', '~> 2.0.1'
+gem 'shoulda-matchers'
+gem 'shoulda'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password

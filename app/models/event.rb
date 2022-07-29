@@ -1,6 +1,8 @@
 class Event < ApplicationRecord
   enum web_source: %i[berlin berghain]
 
+  validates_presence_of :title
+
   def self.find_or_create(params)
     puts params
     evt = Event.find_by(title: params[:title])
